@@ -24,17 +24,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activities.Registration"
-            android:label="Registration"
+            android:name=".view.activities.RegistrationActivity"
+            android:label="@string/title_activity_registration"
             android:parentActivityName=".view.activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <meta-data
-
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.activities.LoginActivity">
-
-            </meta-data>
+                android:value="easyworld.gitc.com.easyworld.view.activities.LoginActivity" />
         </activity>
     </application>
 

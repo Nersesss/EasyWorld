@@ -298,7 +298,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                attemptLogin();
                break;
            case R.id.email_sign_up_button:
-               Intent intent = new Intent(LoginActivity.this, Registration.class);
+               Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
                startActivity(intent);
                break;
        }
