@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="easyworld.gitc.com.easyworld"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="easyworld.gitc.com.easyworld">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -22,6 +22,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activities.Registration"
+            android:label="Registration"
+            android:parentActivityName=".view.activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activities.LoginActivity">
+
+            </meta-data>
         </activity>
     </application>
 
