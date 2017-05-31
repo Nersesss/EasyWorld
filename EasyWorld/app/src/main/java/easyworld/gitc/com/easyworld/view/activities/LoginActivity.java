@@ -41,11 +41,11 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-<<<<<<< HEAD
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
-=======
-public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
->>>>>>> master
+
+//public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
+
+public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor>, OnClickListener {
+
 
     /**
      * Id to identity READ_CONTACTS permission request.
