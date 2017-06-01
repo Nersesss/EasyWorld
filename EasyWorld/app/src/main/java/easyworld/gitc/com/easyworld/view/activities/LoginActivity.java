@@ -293,12 +293,15 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()) {
             case R.id.email_sign_in_button:
                 attemptLogin();
+                intent= new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
                 break;
             case R.id.email_sign_up_button:
-                Intent intent= new Intent(LoginActivity.this, RegistrationActivity.class);
+                intent= new Intent(LoginActivity.this, RegistrationActivity.class);
                 startActivity(intent);
                 break;
         }
