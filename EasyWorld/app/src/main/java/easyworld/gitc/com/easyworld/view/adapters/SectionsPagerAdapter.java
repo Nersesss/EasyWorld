@@ -4,11 +4,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import easyworld.gitc.com.easyworld.view.activities.RegistrationActivity;
-import easyworld.gitc.com.easyworld.view.fragments.CompleteRegistrationFragment;
-import easyworld.gitc.com.easyworld.view.fragments.PhoneConfirmationFragment;
-import easyworld.gitc.com.easyworld.view.fragments.PhoneNumberFragment;
-import easyworld.gitc.com.easyworld.view.fragments.RegistrationFragment;
+import easyworld.gitc.com.easyworld.view.fragments.registrationfragments.CompleteRegistrationFragment;
+import easyworld.gitc.com.easyworld.view.fragments.registrationfragments.PhoneConfirmationFragment;
+import easyworld.gitc.com.easyworld.view.fragments.registrationfragments.PhoneNumberFragment;
+import easyworld.gitc.com.easyworld.view.fragments.registrationfragments.RegistrationFragment;
+
 
 /**
  * Created by ners on 05/31/2017.
@@ -36,7 +36,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             return new CompleteRegistrationFragment();
         }
 
-
         return new RegistrationFragment();
     }
 
@@ -48,18 +47,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return "";
-            case 1:
-                return "";
-            case 2:
-                return "";
-            case 3:
-                return "";
-            case 4:
-                return "";
-        }
         return null;
     }
 }

@@ -44,7 +44,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 
 //public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
 
-public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor>, OnClickListener {
+public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor>, View.OnClickListener {
 
 
     /**
@@ -141,7 +141,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-            @NonNull int[] grantResults) {
+                                           @NonNull int[] grantResults) {
         if (requestCode == REQUEST_READ_CONTACTS) {
             if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 populateAutoComplete();
@@ -293,15 +293,15 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
     @Override
     public void onClick(View v) {
-       switch (v.getId()){
-           case R.id.email_sign_in_button:
-               attemptLogin();
-               break;
-           case R.id.email_sign_up_button:
-               Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
-               startActivity(intent);
-               break;
-       }
+        switch (v.getId()) {
+            case R.id.email_sign_in_button:
+                attemptLogin();
+                break;
+            case R.id.email_sign_up_button:
+                Intent intent= new Intent(LoginActivity.this, RegistrationActivity.class);
+                startActivity(intent);
+                break;
+        }
 
     }
 

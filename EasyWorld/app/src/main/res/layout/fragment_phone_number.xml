@@ -3,24 +3,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context="easyworld.gitc.com.easyworld.view.fragments.PhoneNumberFragment">
+    android:background="@color/gray_lite"
+    tools:context="easyworld.gitc.com.easyworld.view.fragments.registrationfragments.PhoneNumberFragment">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:textSize="20sp"
-       android:textColor="@android:color/black"
-       android:text="Country Name"/>
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Country Name"
+            android:textSize="20sp" />
 
-    </LinearLayout>
+       <View
+           android:layout_width="match_parent"
+           android:background="@android:color/darker_gray"
+           android:layout_margin="16dp"
+           android:layout_height="1dp">
+
+       </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edtCodeCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+374"
+                android:inputType="phone" />
+
+
+            <EditText
+                android:id="@+id/edtPhonNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter phone number"
+                android:inputType="phone" />
+
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>
