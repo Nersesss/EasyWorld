@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context="easyworld.gitc.com.easyworld.view.fragments.CompleteRegistrationFragment">
+    tools:context="easyworld.gitc.com.easyworld.view.fragments.registrationfragments.CompleteRegistrationFragment">
 
 
     <EditText

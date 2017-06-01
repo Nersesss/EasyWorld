@@ -1,4 +1,4 @@
-package easyworld.gitc.com.easyworld.view.fragments;
+package easyworld.gitc.com.easyworld.view.fragments.registrationfragments;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import easyworld.gitc.com.easyworld.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PhoneConfirmationFragment extends Fragment {
+public class PhoneNumberFragment extends Fragment {
 
 
-    public PhoneConfirmationFragment() {
+    public PhoneNumberFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class PhoneConfirmationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_phone_confirmation, container, false);
+        return inflater.inflate(R.layout.fragment_phone_number, container, false);
     }
 
 }
