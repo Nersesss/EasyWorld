@@ -15,6 +15,8 @@ import android.view.View;
 
 import easyworld.gitc.com.easyworld.R;
 
+import easyworld.gitc.com.easyworld.R;
+
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
