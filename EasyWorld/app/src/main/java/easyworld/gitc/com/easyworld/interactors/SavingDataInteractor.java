@@ -1,8 +1,8 @@
 package easyworld.gitc.com.easyworld.interactors;
 
-import easyworld.gitc.com.easyworld.model.Person;
+import easyworld.gitc.com.easyworld.interactors.bo.PersonBo;
 
 public interface SavingDataInteractor {
-    void saveUserData(Person person);
-    Person getUserData();
+    void saveUserData(PersonBo person);
+    PersonBo getUserData();
 }

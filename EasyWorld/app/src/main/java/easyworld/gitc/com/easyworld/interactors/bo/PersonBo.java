@@ -1,6 +1,6 @@
-package easyworld.gitc.com.easyworld.model;
+package easyworld.gitc.com.easyworld.interactors.bo;
 
-public class Person {
+public class PersonBo {
 
     private String name;
 
@@ -12,10 +12,9 @@ public class Person {
         this.name = name;
     }
 
-    public Person() {}
+    public PersonBo() {}
 
-    public Person(String name) {
-
+    public PersonBo(String name) {
         this.name = name;
     }
 }

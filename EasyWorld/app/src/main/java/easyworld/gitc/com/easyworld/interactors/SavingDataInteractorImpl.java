@@ -1,5 +1,6 @@
 package easyworld.gitc.com.easyworld.interactors;
 
+import easyworld.gitc.com.easyworld.interactors.bo.PersonBo;
 import easyworld.gitc.com.easyworld.model.Person;
 
 
@@ -10,7 +11,7 @@ public class SavingDataInteractorImpl implements SavingDataInteractor {
      * @param person
      */
     @Override
-    public void saveUserData(Person person) {
+    public void saveUserData(PersonBo person) {
         // stex grum es bazayum pahelu logikan
     }
 
@@ -19,7 +20,7 @@ public class SavingDataInteractorImpl implements SavingDataInteractor {
      * @return
      */
     @Override
-    public Person getUserData() {
+    public PersonBo getUserData() {
         // stex petqa gres Personi DB-ic stanaln
         return null;
     }

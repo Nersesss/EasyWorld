@@ -2,6 +2,7 @@ package easyworld.gitc.com.easyworld.presenter;
 
 import easyworld.gitc.com.easyworld.interactors.SavingDataInteractorImpl;
 import easyworld.gitc.com.easyworld.model.Person;
+import easyworld.gitc.com.easyworld.view.mappers.UserInfoMapper;
 
 public class UserDataPresenter implements BasePresenter {
 
@@ -16,10 +17,10 @@ public class UserDataPresenter implements BasePresenter {
      * @param person
      */
     public void saveUserInfo(Person person) {
-        savingImpl.saveUserData(person);
+        savingImpl.saveUserData(UserInfoMapper.toBo(person));
     }
 
     public Person checkAndGetUserInfo() {
-        return savingImpl.getUserData();
+        return UserInfoMapper.toModel(savingImpl.getUserData());
     }
 }
