@@ -9,6 +9,7 @@ public class UserInfoMapper {
         PersonBo personBo = new PersonBo();
         if (person != null) {
             personBo.setName(person.getName());
+            personBo.setUserLogined(person.isUserLogined());
         }
 
         return personBo;
@@ -18,6 +19,7 @@ public class UserInfoMapper {
         Person person = new Person();
         if (personBo != null) {
             person.setName(personBo.getName());
+            person.setUserLogined(personBo.isUserLogined());
         }
 
         return person;
