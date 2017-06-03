@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import easyworld.gitc.com.easyworld.R;
+import easyworld.gitc.com.easyworld.view.Navigator;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -298,8 +299,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 break;
             case R.id.email_sign_up_button:
                 intent = new Intent(LoginActivity.this, RegistrationActivity.class);
-
-                intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);
                 break;
         }
@@ -363,6 +362,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
             if (success) {
                 finish();
+                Navigator.navigateToMenuActivity(LoginActivity.this, 222);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

@@ -1,5 +1,6 @@
 package easyworld.gitc.com.easyworld.view.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -136,6 +137,7 @@ public class MenuActivity extends AppCompatActivity
         return true;
     }
 
+
 //    public ArrayList<Map<String, Object>> getMnuItems() {
 //        ArrayList<Map<String, Object>> myList = new ArrayList<>();
 //        HashMap<String, Object> myMap = new HashMap<>();
@@ -155,4 +157,16 @@ public class MenuActivity extends AppCompatActivity
 //        myList.add(myMap);
 //        return myList;
 //    }
+
+    /**
+     * Getting intent of current acitivity
+     * @param activity prevouse acitivty
+     * @param someValue flag to push through intent
+     * @return new Intent to push to next activity
+     */
+    public static Intent getIntent(BaseActivity activity, int someValue) {
+        Intent intent = new Intent(activity, MenuActivity.class);
+        intent.putExtra("value", someValue);
+        return intent;
+    }
 }
