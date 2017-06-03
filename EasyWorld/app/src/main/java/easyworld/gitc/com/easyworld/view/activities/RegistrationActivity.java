@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
 import easyworld.gitc.com.easyworld.R;
+import easyworld.gitc.com.easyworld.model.Person;
+import easyworld.gitc.com.easyworld.presenter.UserDataPresenter;
 import easyworld.gitc.com.easyworld.view.adapters.SectionsPagerAdapter;
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -41,4 +43,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
+    public void saveUserData(Person person) {
+        UserDataPresenter userDataPresenter = new UserDataPresenter();
+        userDataPresenter.saveUserInfo(person);
+    }
 }
