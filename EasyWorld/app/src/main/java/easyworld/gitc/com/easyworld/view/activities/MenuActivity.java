@@ -8,16 +8,27 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 import easyworld.gitc.com.easyworld.R;
+import easyworld.gitc.com.easyworld.view.adapters.NavigationViewMenuItem;
+import easyworld.gitc.com.easyworld.view.helpers.NavViewItem;
 
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private String[] from = {"IMAGE_ID", "TXT_NAME", "TXT_NUMBER"};
+    private int[] to = {R.id.imgMenu, R.id.txtName, R.id.txtNumber};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +54,29 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+//        ListView listMenu = (ListView) findViewById(R.id.lst_menu_items);
+//        ArrayList<Map<String, Object>> list = getMenuItems();
+//        SimpleAdapter adapter = new SimpleAdapter(getApplicationContext(), list, R.layout.menu_item, from, to);
+//        listMenu.setAdapter(adapter);
+
+        RecyclerView listMenu = (RecyclerView) findViewById(R.id.lst_menu_items);
+        listMenu.setLayoutManager(new LinearLayoutManager(this));
+
+        NavigationViewMenuItem adapter = new NavigationViewMenuItem(getApplicationContext(), getMenuItems());
+        listMenu.setAdapter(adapter);
+    }
+
+    private List<NavViewItem> getMenuItems() {
+        List<NavViewItem> arrayList = new ArrayList<>();
+
+        NavViewItem navViewItem = new NavViewItem(R.drawable.ic_menu_camera, "Camera", "kkk");
+        arrayList.add(navViewItem);
+        navViewItem = new NavViewItem(R.drawable.ic_menu_gallery, "Gallery", "");
+        arrayList.add(navViewItem);
+        navViewItem = new NavViewItem(R.drawable.ic_menu_slideshow, "slideshow","");
+        arrayList.add(navViewItem);
+        return arrayList;
     }
 
     @Override
@@ -101,4 +135,24 @@ public class MenuActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+//    public ArrayList<Map<String, Object>> getMnuItems() {
+//        ArrayList<Map<String, Object>> myList = new ArrayList<>();
+//        HashMap<String, Object> myMap = new HashMap<>();
+//        myMap.put(from[0], R.drawable.ic_menu_camera);
+//        myMap.put(from[1], "Camera");
+//        myMap.put(from[2], "klk");
+//        myList.add(myMap);
+//        myMap = new HashMap<>();
+//        myMap.put(from[0], R.drawable.ic_menu_gallery);
+//        myMap.put(from[1], "Camera");
+//        myMap.put(from[2], "klk");
+//        myList.add(myMap);
+//        myMap = new HashMap<>();
+//        myMap.put(from[0], R.drawable.ic_menu_slideshow);
+//        myMap.put(from[1], "Camera");
+//        myMap.put(from[2], "klk");
+//        myList.add(myMap);
+//        return myList;
+//    }
 }
