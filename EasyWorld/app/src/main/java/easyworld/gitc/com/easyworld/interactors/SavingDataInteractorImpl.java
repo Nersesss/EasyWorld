@@ -6,6 +6,8 @@ import easyworld.gitc.com.easyworld.model.Person;
 
 public class SavingDataInteractorImpl implements SavingDataInteractor {
 
+
+
     /**
      *  Saving user data
      * @param person

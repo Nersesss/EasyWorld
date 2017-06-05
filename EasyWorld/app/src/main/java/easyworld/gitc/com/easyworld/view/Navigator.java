@@ -17,8 +17,8 @@ public class Navigator {
      */
     public static void navigateToMenuActivity(BaseActivity activity, int someValue) {
         if (activity != null) {
-            Intent intent = MenuActivity.getIntent(activity, someValue);
-            activity.startActivity(intent);
+         //   Intent intent = MenuActivity.getIntent(activity, someValue);
+         //   activity.startActivity(intent);
         }
     }
 }
