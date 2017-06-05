@@ -7,21 +7,22 @@ public class UserInfoMapper {
 
     public static PersonBo toBo(Person person) {
         PersonBo personBo = new PersonBo();
+
         if (person != null) {
-            personBo.setName(person.getName());
-            personBo.setUserLogined(person.isUserLogined());
-        }
+                personBo.setName(person.getName());
+                personBo.setUserLogined(person.isUserLogined());
+                }
 
-        return personBo;
-    }
+                return personBo;
+                }
 
-    public static Person toModel(PersonBo personBo) {
+public static Person toModel(PersonBo personBo) {
         Person person = new Person();
         if (personBo != null) {
-            person.setName(personBo.getName());
-            person.setUserLogined(personBo.isUserLogined());
+        person.setName(personBo.getName());
+        person.setUserLogined(personBo.isUserLogined());
         }
 
         return person;
-    }
-}
+        }
+        }
